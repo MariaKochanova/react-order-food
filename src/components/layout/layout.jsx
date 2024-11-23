@@ -1,9 +1,12 @@
+import { ProgressBar } from "../progress-bar/progress-bar"
+
 export const Layout = ({ children }) => {
     return (
         <>
+            <ProgressBar viewVariant='colored' />
             <header>
                 <h1>AnyFood</h1>
-                <p>Это хедер. h1 тут не типичная ситуация, но вдруг... Зато похоже на макет.</p>
+                <p>Это хедер.</p>
             </header>
             {children}
             <footer>
