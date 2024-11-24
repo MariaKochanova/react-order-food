@@ -33,11 +33,11 @@ export const useForm = () => {
     const [form, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
 
     const setName = (name) => {
-        dispatch({ type: 'SET_NAME', payload: name });
+        dispatch({ type: SET_NAME_ACTION, payload: name });
     }
 
     const setText = (text) => {
-        dispatch({ type: 'SET_TEXT', payload: text });
+        dispatch({ type: SET_TEXT_ACTION, payload: text });
     }
 
     const increaseRating = () => {
