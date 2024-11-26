@@ -1,0 +1,17 @@
+.tab {
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.default {
+    color: var(--black);
+    opacity: .7;
+}
+
+.active {
+    color: var(--black);
+    opacity: 1;
+}

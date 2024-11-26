@@ -1,0 +1,12 @@
+.restaurantsPage {
+    padding-bottom: 24px;
+}
+
+.restaurantsNav {
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 32px;
+    padding: 16px;
+}
