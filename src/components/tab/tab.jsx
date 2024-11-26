@@ -7,7 +7,7 @@ export const Tab = ({ title, onClick, isActive, viewVariant }) => {
             disabled={isActive}
             onClick={onClick}
             className={classNames(styles.tab, {
-                [styles.active]: isActive && viewVariant === 'active',
+                [styles.active]: viewVariant === 'active',
                 [styles.default]: viewVariant === 'default',
             })}>
             {title}
