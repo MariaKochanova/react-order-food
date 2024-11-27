@@ -1,0 +1,21 @@
+.header {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.title {
+    margin: 0;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.titleLine {
+    text-decoration: line-through;
+}
+
+.titleYellow {
+    color: var(--yellow-light);
+    text-decoration: line-through;
+}

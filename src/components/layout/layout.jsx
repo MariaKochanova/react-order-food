@@ -1,17 +1,14 @@
+import { Header } from "../header/header"
+import { Footer } from "../footer/footer"
 import { ProgressBar } from "../progress-bar/progress-bar"
 
 export const Layout = ({ children }) => {
     return (
         <>
-            <ProgressBar viewVariant='colored' />
-            <header>
-                <h1>AnyFood</h1>
-                <p>Это хедер.</p>
-            </header>
+            <ProgressBar />
+            <Header />
             {children}
-            <footer>
-                <p>А это футер, но кажется в макете сайта его нет.</p>
-            </footer>
+            <Footer />
         </>
     )
 }
