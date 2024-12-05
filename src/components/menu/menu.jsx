@@ -1,7 +1,10 @@
+import { useAuth } from '../autn-context/use-auth.js'
 import { CartCounter } from '../cart-counter/cart-counter'
 import styles from './menu.module.css'
 
 export const Menu = ({ menu }) => {
+    const { auth } = useAuth();
+
     return (
         <>
             <h3>Menu</h3>
@@ -13,7 +16,7 @@ export const Menu = ({ menu }) => {
                             <p className={styles.ingredients} >{dish.ingredients.join(', ')}</p>
                             <p className={styles.price} >{dish.price + '.00 $'}</p>
                         </div>
-                        <CartCounter />
+                        {auth.isAuthorized && <CartCounter />}
                     </li>
                 ))}
             </ul>
