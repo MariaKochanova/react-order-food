@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     padding: 40px;
+    position: relative;
 }
 
 .title {
@@ -18,4 +19,17 @@
 .titleYellow {
     color: var(--yellow-light);
     text-decoration: line-through;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    height: 118px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
 }
