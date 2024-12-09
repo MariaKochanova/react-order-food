@@ -4,19 +4,18 @@ import { Reviews } from '../reviews/reviews.jsx'
 import { ReviewForm } from '../review-form/review-form.jsx'
 import styles from './restaurant.module.css'
 
-export const Restaurant = ({ restaurant }) => {
-    const { name, menu, reviews } = restaurant;
+export const Restaurant = ({ name, menu, reviews }) => {
     const { auth } = useAuth();
 
-    if (!name || menu.lenght === 0) {
+    if (!name) {
         return null;
     }
 
     return (
         <section className={styles.restaurant}>
             <h2 className={styles.title}>{name}</h2>
-            <Menu menu={menu} />
-            {Boolean(reviews.length) && <Reviews reviews={reviews} />}
+            <Menu menuIds={menu} />
+            {Boolean(reviews.length) && <Reviews reviewsIds={reviews} />}
             {auth.isAuthorized && <ReviewForm />}
         </section>
     )
