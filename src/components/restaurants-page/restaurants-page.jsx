@@ -8,7 +8,7 @@ import styles from './reastaurants-page.module.css'
 export const RestaurantsPage = () => {
     const restaurantsIds = useSelector(selectRestaurantsIds);
 
-    const [activeRestaurantId, setActiveRestaurantId] = useState(restaurantsIds[0].id);
+    const [activeRestaurantId, setActiveRestaurantId] = useState(restaurantsIds[0]);
 
     const handleSetActiveRestaurantId = (id) => {
         if (activeRestaurantId === id) {
