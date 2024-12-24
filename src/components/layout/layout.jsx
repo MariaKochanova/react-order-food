@@ -5,9 +5,7 @@ import { Cart } from "../cart/cart"
 import { useAuth } from "../autn-context/use-auth"
 
 export const Layout = ({ children }) => {
-    const auth = useAuth();
-
-    const isAuthorized = auth;
+    const isAuthorized = useAuth();
 
     return (
         <>

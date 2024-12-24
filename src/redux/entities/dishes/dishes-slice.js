@@ -15,8 +15,8 @@ export const dishesSlise = createSlice({
     initialState,
     selectors: {
         selectDishesIds: (state) => state.ids,
-        selectDisheById: (state, id) => state.entities[id],
+        selectDishById: (state, id) => state.entities[id],
     }
 });
 
-export const { selectDishesIds, selectDisheById } = dishesSlise.selectors;
+export const { selectDishesIds, selectDishById } = dishesSlise.selectors;
