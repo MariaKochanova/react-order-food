@@ -1,4 +1,4 @@
-import styles from './menu.module.css'
+import styles from './dish.module.css'
 
 export const Dish = ({ name, price, ingredients }) => {
     return (

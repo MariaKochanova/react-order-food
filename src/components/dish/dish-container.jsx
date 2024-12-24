@@ -10,6 +10,6 @@ export const DishContainer = ({ id }) => {
     }
 
     return (
-        <Dish name={dish.name} price={dish.price} ingredients={dish.ingredients} />
+        <Dish name={dish.name} price={dish.price} ingredients={dish.ingredients} id={id} />
     )
 }

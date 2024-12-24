@@ -1,8 +1,15 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { Counter } from '../counter/counter';
-import { useCount } from './use-counter';
+import { addToCart, removeFromCart, selectCartItemAmountById } from '../../redux/ui/cart/cart-slice';
 
-export const CartCounter = () => {
-    const { value, decrease, increase } = useCount();
+export const CartCounter = ({ id }) => {
+    const dispatch = useDispatch();
 
-    return <Counter value={value} decrease={decrease} increase={increase} />
+    const amount =
+        useSelector((state) => selectCartItemAmountById(state, id)) || 0;
+
+    const increase = () => dispatch(addToCart(id));
+    const decrease = () => dispatch(removeFromCart(id));
+
+    return <Counter value={amount} decrease={decrease} increase={increase} />
 }
