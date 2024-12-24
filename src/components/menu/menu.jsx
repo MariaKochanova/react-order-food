@@ -1,6 +1,6 @@
 import { useAuth } from '../autn-context/use-auth.js'
 import { CartCounter } from '../cart-counter/cart-counter'
-import { DishContainer } from './dish-container.jsx';
+import { DishContainer } from '../dish/dish-container.jsx'
 import styles from './menu.module.css'
 
 export const Menu = ({ menuIds }) => {
@@ -15,7 +15,7 @@ export const Menu = ({ menuIds }) => {
                         <div>
                            <DishContainer id={id} />
                         </div>
-                        {auth.isAuthorized && <CartCounter />}
+                        {auth.isAuthorized && <CartCounter id={id} />}
                     </li>
                 ))}
             </ul>
